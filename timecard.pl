@@ -5,7 +5,7 @@ use Editor; # DEPEND
 
 my $TIMECARD = $ENV{TIMECARD} || "$ENV{HOME}/.timecard";
 
-my $RATE = 3995900;
+my $RATE = 100000;
 
 my $what = shift;
 
