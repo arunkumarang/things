@@ -12,7 +12,7 @@ Windows (Cygwin)
     make install
 		
   Get timecard source from https://github.com/agxe/timecard, and then:
-	make
+    make
     make install
 
 --------------------------------------------------
