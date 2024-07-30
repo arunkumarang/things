@@ -1,7 +1,7 @@
 
 This is the original timecard source: https://github.com/peff/timecard
-I have just forked and customized for my use.
 
+I have just forked and customized for my use.
 
 Compile and install timecard
 
@@ -11,7 +11,7 @@ Windows (Cygwin)
     make
     make install
 		
-  Get timecard source from https://github.com/agxe/time, and then:
+  Get timecard source from https://github.com/agxe/timecard, and then:
 	make
     make install
 
