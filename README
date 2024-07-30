@@ -7,11 +7,14 @@ Compile and install timecard
 
 Windows (Cygwin)
 
-  Get mfm source from https://github.com/peff/mfm, and then:
-    make
-    make install
+  Install dependencies:
+
+    Get 'mfm' from https://github.com/peff/mfm, and then:
+      make
+      make install
 		
   Get timecard source from https://github.com/agxe/timecard, and then:
+    mfm
     make
     make install
 

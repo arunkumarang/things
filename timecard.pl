@@ -5,7 +5,9 @@ use Editor; # DEPEND
 
 my $TIMECARD = $ENV{TIMECARD} || "$ENV{HOME}/.timecard";
 
-my $RATE = 100000;
+my $YEARLY_RATE = 100000;
+
+my $CURRENCY = "INR";
 
 my $what = shift;
 
@@ -91,11 +93,11 @@ elsif ($what eq 'daily') {
 elsif ($what eq 'rate') {
   my $work_hour = 40;
   my $work_week = 52;
-  my $hourly_rate = $RATE / ($work_hour * $work_week);
+  my $hourly_rate = $YEARLY_RATE / ($work_hour * $work_week);
   my $daily_rate = $hourly_rate * 8;
 
-  printf "hourly rate : %d INR\n", int($hourly_rate);
-  printf "daily rate  : %d INR\n", int($daily_rate);
+  printf "hourly rate : %d %s\n", int($hourly_rate), $CURRENCY;
+  printf "daily rate  : %d %s\n", int($daily_rate),  $CURRENCY;
 }
 
 elsif ($what eq 'help') {
@@ -115,7 +117,7 @@ elsif (!$what) {
   }
   else {
     print "You are currently punched OUT.\n";
-	help()
+    help()
   }
 }
 
