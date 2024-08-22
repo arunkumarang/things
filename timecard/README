@@ -1,18 +1,15 @@
 
-This is the original timecard source: https://github.com/peff/timecard. I have just
-forked and customized for my use.
+This is the original timecard repository: https://github.com/peff/timecard
 
 Compile and install timecard
 
 Windows (Cygwin)
 
-  Install dependencies:
-
-    Get 'mfm' from https://github.com/peff/mfm, and then:
-      make
-      make install
+  Get 'mfm' from https://github.com/peff/mfm, then:
+    ./bootstrap
+    make install
 		
-  Get timecard source from https://github.com/agxe/timecard, and then:
+  Get timecard from https://github.com/Zero-6174/Things/tree/main/timecard, then:
     mfm
     make
     make install
