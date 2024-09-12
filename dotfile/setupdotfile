@@ -8,10 +8,10 @@ mv ${HOME}/.gitconfig ${HOME}/.gitconfig1
 mv ${HOME}/.nanorc    ${HOME}/.nanorc1
 mv ${HOME}/.nano      ${HOME}/.nano1
 
-cp .bashrc    ${HOME}/
-cp .gitconfig ${HOME}/
-cp .nanorc    ${HOME}/
-cp -r .nano   ${HOME}/
+cp dotbashrc    ${HOME}/.bashrc
+cp dotgitconfig ${HOME}/.gitconfig
+cp dotnanorc    ${HOME}/.nanorc
+cp -r dotnano   ${HOME}/.nano
 
 cp bin/createbackup        /usr/bin
 cp etc/exclude-from-backup /etc/
