@@ -1,9 +1,0 @@
-[user]
-	name = Arun
-	email = arungs@zohomail.in
-[color]
-	ui = auto
-[alias]
-	st = status
-	ci = commit
-	up = pull
