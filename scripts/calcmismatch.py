@@ -6,7 +6,7 @@
 Description: Find the mismatch difference between reference and target file.
 Author: Arun G
 Date created: 2023/08/01
-Version: 0.1.0
+Version: 0.1.1
 Python version: 3.11.0
 """
 
@@ -37,7 +37,7 @@ def find_difference(ref_buf, tar_buf, width, height):
     max_rv = 0.0
     max_tv = 0.0
     max_diff = 0.0
-    total_mismatch_frac = 0.0
+    total_diff = 0.0
 
     max_idx = 0
     zero_cnt = 0
@@ -56,28 +56,27 @@ def find_difference(ref_buf, tar_buf, width, height):
             max_tv = tv
             max_idx = idx + 1
 
-        if rv == 0.0:
+        if abs(rv) == 0.0 and abs(tv) == 0.0:
             zero_cnt += 1
         else:
-            total_mismatch_frac += (diff / abs(rv));
+            total_diff += diff
 
     if max_diff > 0:
         y = max_idx // width;
         x = max_idx % width
 
-        avg_mismatch_pct = (total_mismatch_frac / (width * height - 
-                                                   zero_cnt)) * 100.0;
+        avg_diff = (total_diff / (width * height - zero_cnt));
 
         print(f"Ref val = {max_rv:0.6f}, Tar val = {max_tv:0.6f}, "
               f"Max diff = {max_diff:0.6f}, X = {x:d}, Y = {y:d}, "
-              f"Avg Mismatch = {avg_mismatch_pct:0.10f}%")
+              f"Avg diff = {avg_diff:0.6f}")
     else:
         print("No difference in files.")
 
 def main(ref_file, tar_file, width, height):
     check_pyver()
 
-    print(f"\nComparing {ref_file:s} vs {tar_file:s}...")
+    print(f"\nComparing {ref_file:s} vs {tar_file:s}")
 
     ref_content = read_file(ref_file)
     tar_content = read_file(tar_file)
@@ -85,7 +84,7 @@ def main(ref_file, tar_file, width, height):
     num_elem = width * height
     if (num_elem != len(ref_content) or num_elem != len(tar_content)):
         print("size is different between reference and target file.")
-        return
+        #return
 
     find_difference(ref_content, tar_content, width, height)
 
