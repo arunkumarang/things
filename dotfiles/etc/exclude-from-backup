@@ -1,0 +1,10 @@
+.bash_history
+tmp
+.Trash
+.cache
+.ccache
+.dbus
+.gvfs
+.local/share/Trash
+.mozilla/firefox/*/Cache*
+src/linux-trees/linux*/build-*
