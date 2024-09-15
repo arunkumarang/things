@@ -3,6 +3,8 @@ set titlecolor normal,normal
 set nohelp
 set numbercolor italic,normal,normal
 set nonewlines
+set constantshow
+set fill 80
 
 include "~/.nano/apacheconf.nanorc"
 include "~/.nano/arduino.nanorc"
