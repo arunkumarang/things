@@ -9,7 +9,7 @@ Windows (Cygwin)
     ./bootstrap
     make install
 		
-  Get timecard from https://github.com/Zero-6174/Things/tree/main/timecard, then:
+  Get timecard from https://github.com/arunkumarang/things/tree/main/timecard, then:
     mfm
     make
     make install
